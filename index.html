@@ -1,1 +1,492 @@
-<h1>ok</h1>
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>河南招标日报 · 2026-11-09</title>
+<style>
+:root {
+  --bg:#f6f7f9; --card:#ffffff; --ink:#16181d; --ink-2:#4c5361; --ink-3:#868e9c;
+  --line:#e4e7ec; --line-2:#eef0f3; --accent:#1a4f8b; --accent-soft:#eef3f9;
+  --urgent:#c0392b; --soon:#b26a00; --radius:12px;
+  --shadow:0 1px 2px rgba(16,24,40,.04), 0 1px 3px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:#0f1115; --card:#171a20; --ink:#e8eaed; --ink-2:#a8b0bd; --ink-3:#6f7787;
+    --line:#252a32; --line-2:#1e2229; --accent:#6ea3e8; --accent-soft:#16233a;
+    --urgent:#ef7a6e; --soon:#e0a44a;
+    --shadow:0 1px 2px rgba(0,0,0,.3);
+  }
+}
+* { box-sizing:border-box; }
+html,body { max-width:100%; overflow-x:hidden; }
+body { margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased; font-size:15px; line-height:1.6; }
+a { color:var(--accent); }
+.wrap { max-width:760px; margin:0 auto; padding:0 16px 56px; }
+
+/* ── 顶栏 ── */
+.top { position:sticky; top:0; z-index:20; background:color-mix(in srgb,var(--bg) 88%, transparent);
+  backdrop-filter:saturate(180%) blur(12px); -webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--line); }
+.top-in { max-width:760px; margin:0 auto; padding:11px 16px; display:flex;
+  align-items:baseline; gap:10px; }
+.brand { font-weight:700; font-size:15px; letter-spacing:.2px; }
+.top .d { color:var(--ink-3); font-size:13px; }
+.top .c { margin-left:auto; color:var(--accent); font-weight:700; font-size:13px;
+  font-variant-numeric:tabular-nums; }
+
+/* ── 头部 ── */
+.head { padding:26px 0 4px; }
+h1 { font-size:27px; line-height:1.35; margin:0 0 10px; font-weight:700; letter-spacing:-.2px; }
+h1 .red { color:var(--urgent); }
+.date { color:var(--ink-3); font-size:14px; margin:0 0 16px; }
+.intro { color:var(--ink-2); font-size:15px; line-height:1.75; margin:0 0 18px; }
+.intro .red { color:var(--urgent); font-weight:700; }
+
+/* ── 指标条 ── */
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:var(--line); border:1px solid var(--line); border-radius:var(--radius);
+  overflow:hidden; margin:0 0 20px; }
+.stat { background:var(--card); padding:12px 8px; text-align:center; }
+.stat b { display:block; font-size:21px; font-weight:700; line-height:1.2;
+  font-variant-numeric:tabular-nums; letter-spacing:-.4px; }
+.stat span { display:block; font-size:11.5px; color:var(--ink-3); margin-top:3px; }
+.stat.a b { color:var(--accent); }
+.stat.h b { color:var(--urgent); }
+.stat.s b { color:var(--soon); }
+
+/* ── 筛选 ── */
+.chips { display:flex; gap:7px; overflow-x:auto; padding:2px 0 14px;
+  -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+.chips::-webkit-scrollbar { display:none; }
+.chip { flex:0 0 auto; border:1px solid var(--line); background:var(--card);
+  color:var(--ink-2); border-radius:999px; padding:6px 13px; font-size:13px;
+  font-family:inherit; cursor:pointer; transition:background .16s,color .16s,border-color .16s; }
+.chip i { font-style:normal; color:var(--ink-3); margin-left:3px; font-variant-numeric:tabular-nums; }
+.chip.on { background:var(--accent); border-color:var(--accent); color:#fff; }
+.chip.on i { color:rgba(255,255,255,.75); }
+.chip.warn { border-color:var(--urgent); color:var(--urgent); }
+.chip.warn.on { background:var(--urgent); color:#fff; }
+@media (prefers-reduced-motion: reduce) { .chip { transition:none; } }
+
+/* ── 卡片列表 ── */
+.list { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+  padding:13px 14px; box-shadow:var(--shadow); min-width:0; overflow:hidden; }
+.card.u-hot { border-left:3px solid var(--urgent); }
+.card.u-warm { border-left:3px solid var(--soon); }
+.row-top { display:flex; align-items:flex-start; gap:8px; margin-bottom:7px;
+  min-width:0; }
+.idx { flex:0 0 auto; color:var(--ink-3); font-size:13px; font-variant-numeric:tabular-nums;
+  padding-top:2px; min-width:18px; }
+.ttl { flex:1 1 auto; min-width:0; color:var(--ink); font-weight:600; font-size:15.5px;
+  line-height:1.55; text-decoration:none; overflow-wrap:anywhere; word-break:normal; }
+.ttl:hover { color:var(--accent); text-decoration:underline; }
+.urg { flex:0 0 auto; font-size:11.5px; font-weight:600; padding:2px 8px;
+  border-radius:999px; white-space:nowrap; margin-top:1px; }
+.u-hot .urg { background:color-mix(in srgb,var(--urgent) 12%, transparent); color:var(--urgent); }
+.u-warm .urg { background:color-mix(in srgb,var(--soon) 13%, transparent); color:var(--soon); }
+.u-calm .urg { background:var(--line-2); color:var(--ink-3); }
+.u-none .urg { background:var(--line-2); color:var(--ink-3); }
+.u-past { opacity:.55; }
+.u-past .urg { background:var(--line-2); color:var(--ink-3); }
+.meta { display:flex; flex-wrap:wrap; gap:6px; align-items:center;
+  color:var(--ink-3); font-size:12.5px; }
+.track { background:var(--accent-soft); color:var(--accent); padding:2px 8px;
+  border-radius:5px; font-size:11.5px; font-weight:600; }
+.tag-sub { background:color-mix(in srgb,var(--soon) 13%, transparent); color:var(--soon);
+  padding:2px 7px; border-radius:5px; font-size:11.5px; font-weight:600; }
+.m { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  flex:1 1 0; max-width:100%; }
+details { margin-top:9px; }
+summary { cursor:pointer; font-size:12.5px; color:var(--accent); list-style:none;
+  display:inline-flex; align-items:center; gap:4px; user-select:none; }
+summary::-webkit-details-marker { display:none; }
+summary::after { content:"▾"; font-size:10px; transition:transform .18s; }
+details[open] summary::after { transform:rotate(180deg); }
+.dt { width:100%; border-collapse:collapse; margin-top:10px; font-size:13px; }
+.dt th { text-align:left; color:var(--ink-3); font-weight:400; padding:7px 10px 7px 0;
+  vertical-align:top; white-space:nowrap; width:76px; border-bottom:1px solid var(--line-2); }
+.dt td { color:var(--ink-2); padding:7px 0; vertical-align:top;
+  border-bottom:1px solid var(--line-2); word-break:break-word; }
+.dt tr:last-child th,.dt tr:last-child td { border-bottom:none; }
+.src { display:inline-block; margin-top:10px; font-size:12.5px; color:var(--accent);
+  text-decoration:none; }
+.foot { margin-top:26px; padding-top:14px; border-top:1px solid var(--line);
+  color:var(--ink-3); font-size:12px; line-height:1.85; }
+.hide { display:none !important; }
+@media (max-width:560px) {
+  .stats { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:420px) {
+  .wrap { padding:0 13px 44px; }
+  h1 { font-size:23px; }
+  .card { padding:12px; }
+  .ttl { font-size:15px; }
+}
+</style></head>
+<body>
+<div class="top"><div class="top-in">
+  <span class="brand">每日推送</span>
+  <span class="d">2026-11-09 星期一</span>
+  <span class="c">18 条</span>
+</div></div>
+
+<div class="wrap">
+  <div class="head">
+    <h1>领导，今日招标信息 <span class="red">18</span> 条</h1>
+    <div class="intro">领导，11月3日下午至11月8日清晨监测到消防工程、光伏工程、风电工程、电力工程类招标信息 <b class="red">18</b> 条。<br>首次推送含全部在架项目，明日起只推当日新增</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat a"><b>4</b><span>覆盖赛道</span></div>
+    <div class="stat"><b>18</b><span>仍可投标</span></div>
+    <div class="stat h"><b>4天</b><span>最近截止</span></div>
+    <div class="stat s"><b>11</b><span>已披露金额</span></div>
+  </div>
+
+  <div class="chips" role="tablist">
+    <button class="chip on" data-f="all">全部 <i>18</i></button><button class="chip" data-f="消防工程">消防工程 <i>14</i></button><button class="chip" data-f="光伏工程">光伏工程 <i>2</i></button><button class="chip" data-f="风电工程">风电工程 <i>1</i></button><button class="chip" data-f="电力工程">电力工程 <i>1</i></button>
+  </div>
+
+  <ul class="list" id="list">
+    
+    <li class="card u-warm" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">1</span>
+        <a class="ttl" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxtpgg/202611/t20261104_27617782.htm" target="_blank" rel="noopener">新乡市机关事务中心人民路综合楼和原规划局楼消防设施设备维修改造项目（三次）-竞争性谈判公告</a>
+        <span class="urg u-warm">剩4天</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">新乡市机关事务中心 · 河南省/新乡市 · 预算 74.74万元</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省/新乡市</td></tr><tr><th>公告日</th><td>2026-11-04</td></tr><tr><th>采购单位</th><td>新乡市机关事务中心</td></tr><tr><th>服务类型</th><td>消防工程 · 竞争性谈判公告</td></tr><tr><th>预算金额</th><td>74.74万元</td></tr><tr><th>投标截止</th><td>2026-11-13</td></tr><tr><th>服务期限</th><td>60天</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>艾金工程管理有限公司</td></tr><tr><th>来源</th><td>中国政府采购网</td></tr></table>
+        <a class="src" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxtpgg/202611/t20261104_27617782.htm" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-warm" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">2</span>
+        <a class="ttl" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261105_27629181.htm" target="_blank" rel="noopener">范县高码头镇第一小学范县高码头镇中学消防水池建设项目竞争性磋商公告</a>
+        <span class="urg u-warm">剩7天</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">范县高码头镇第一小学 · 河南省 · 预算 87.34万元</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省</td></tr><tr><th>公告日</th><td>2026-11-05</td></tr><tr><th>采购单位</th><td>范县高码头镇第一小学</td></tr><tr><th>服务类型</th><td>消防工程 · 竞争性磋商公告</td></tr><tr><th>预算金额</th><td>87.34万元</td></tr><tr><th>投标截止</th><td>2026-11-16</td></tr><tr><th>服务期限</th><td>签订合同后90日历天</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>中世景弘工程项目管理有限公司</td></tr><tr><th>来源</th><td>中国政府采购网</td></tr></table>
+        <a class="src" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261105_27629181.htm" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-warm" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">3</span>
+        <a class="ttl" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261103_27610009.htm" target="_blank" rel="noopener">孟州市殡仪馆消防提升改造项目（三次） 竞争性磋商公告</a>
+        <span class="urg u-warm">剩7天</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">孟州市殡仪馆 · 河南省 · 预算 78.12万元</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省</td></tr><tr><th>公告日</th><td>2026-11-03</td></tr><tr><th>采购单位</th><td>孟州市殡仪馆</td></tr><tr><th>服务类型</th><td>消防工程 · 竞争性磋商公告</td></tr><tr><th>预算金额</th><td>78.12万元</td></tr><tr><th>投标截止</th><td>2026-11-16</td></tr><tr><th>服务期限</th><td>40日历天</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>河南志臻项目管理有限公司</td></tr><tr><th>来源</th><td>中国政府采购网</td></tr></table>
+        <a class="src" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261103_27610009.htm" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-calm" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">4</span>
+        <a class="ttl" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261105_27627169.htm" target="_blank" rel="noopener">南阳市宛城区人民法院消防改造项目（二次）-竞争性磋商公告</a>
+        <span class="urg u-calm">剩8天</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">南阳市宛城区人民法院 · 河南省/南阳市 · 预算 276.49万元</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省/南阳市</td></tr><tr><th>公告日</th><td>2026-11-05</td></tr><tr><th>采购单位</th><td>南阳市宛城区人民法院</td></tr><tr><th>服务类型</th><td>消防工程 · 竞争性磋商公告</td></tr><tr><th>预算金额</th><td>276.49万元</td></tr><tr><th>投标截止</th><td>2026-11-17</td></tr><tr><th>服务期限</th><td>同工期</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>和诚项目管理（河南）有限公司</td></tr><tr><th>来源</th><td>中国政府采购网</td></tr></table>
+        <a class="src" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261105_27627169.htm" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-calm" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">5</span>
+        <a class="ttl" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261104_27619754.htm" target="_blank" rel="noopener">郸城县人民法院审判综合楼消防改造工程项目-竞争性磋商公告</a>
+        <span class="urg u-calm">剩8天</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">郸城县人民法院 · 河南省 · 预算 228.92万元</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省</td></tr><tr><th>公告日</th><td>2026-11-04</td></tr><tr><th>采购单位</th><td>郸城县人民法院</td></tr><tr><th>服务类型</th><td>消防工程 · 竞争性磋商公告</td></tr><tr><th>预算金额</th><td>228.92万元</td></tr><tr><th>投标截止</th><td>2026-11-17</td></tr><tr><th>服务期限</th><td>合同签订后90日历天内</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>周口市公共资源交易中心(周口市政府采购中心)</td></tr><tr><th>来源</th><td>中国政府采购网</td></tr></table>
+        <a class="src" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261104_27619754.htm" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-calm" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">6</span>
+        <a class="ttl" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261105_27627873.htm" target="_blank" rel="noopener">建设工程消防设计审查验收历史遗留问题专项治理专家技术服务项目-竞争性磋商公告</a>
+        <span class="urg u-calm">剩9天</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">灵宝市住房和城乡建设局 · 河南省 · 预算 45万元</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省</td></tr><tr><th>公告日</th><td>2026-11-05</td></tr><tr><th>采购单位</th><td>灵宝市住房和城乡建设局</td></tr><tr><th>服务类型</th><td>消防工程 · 竞争性磋商公告</td></tr><tr><th>预算金额</th><td>45万元</td></tr><tr><th>投标截止</th><td>2026-11-18</td></tr><tr><th>服务期限</th><td>同服务期限</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>中瀛国际工程管理有限公司</td></tr><tr><th>来源</th><td>中国政府采购网</td></tr></table>
+        <a class="src" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261105_27627873.htm" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-calm" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">7</span>
+        <a class="ttl" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261105_27626155.htm" target="_blank" rel="noopener">南阳高新技术产业开发区国土规划建设环保局建设工程消防验收第三方评定服务项目-竞争性磋商公告</a>
+        <span class="urg u-calm">剩9天</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">南阳高新技术产业开发区国土规划建设环保局 · 河南省/南阳市 · 预算 50万元</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省/南阳市</td></tr><tr><th>公告日</th><td>2026-11-05</td></tr><tr><th>采购单位</th><td>南阳高新技术产业开发区国土规划建设环保局</td></tr><tr><th>服务类型</th><td>消防工程 · 竞争性磋商公告</td></tr><tr><th>预算金额</th><td>50万元</td></tr><tr><th>投标截止</th><td>2026-11-18</td></tr><tr><th>服务期限</th><td>同服务期限</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>河南鹏宇工程管理有限公司</td></tr><tr><th>来源</th><td>中国政府采购网</td></tr></table>
+        <a class="src" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261105_27626155.htm" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-calm" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">8</span>
+        <a class="ttl" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261103_27609929.htm" target="_blank" rel="noopener">新密市人民检察院办公楼消防设施维修改造项目-竞争性磋商公告</a>
+        <span class="urg u-calm">剩9天</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">新密市人民检察院 · 河南省 · 预算 211.06万元</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省</td></tr><tr><th>公告日</th><td>2026-11-03</td></tr><tr><th>采购单位</th><td>新密市人民检察院</td></tr><tr><th>服务类型</th><td>消防工程 · 竞争性磋商公告</td></tr><tr><th>预算金额</th><td>211.06万元</td></tr><tr><th>投标截止</th><td>2026-11-18</td></tr><tr><th>服务期限</th><td>合同签订至质保期结束</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>河南豫信招标有限责任公司</td></tr><tr><th>来源</th><td>中国政府采购网</td></tr></table>
+        <a class="src" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261103_27609929.htm" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-calm" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">9</span>
+        <a class="ttl" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261106_27635075.htm" target="_blank" rel="noopener">陕州区物联网智慧烟感及消防控制室智能视频监控建设项目（二次）竞争性磋商公告</a>
+        <span class="urg u-calm">剩10天</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">三门峡市陕州区应急管理局 · 河南省 · 预算 75万元</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省</td></tr><tr><th>公告日</th><td>2026-11-06</td></tr><tr><th>采购单位</th><td>三门峡市陕州区应急管理局</td></tr><tr><th>服务类型</th><td>消防工程 · 竞争性磋商公告</td></tr><tr><th>预算金额</th><td>75万元</td></tr><tr><th>投标截止</th><td>2026-11-19</td></tr><tr><th>服务期限</th><td>合同签订后15日历天内交付</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>东信工程项目管理有限公司</td></tr><tr><th>来源</th><td>中国政府采购网</td></tr></table>
+        <a class="src" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261106_27635075.htm" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-calm" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">10</span>
+        <a class="ttl" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261106_27632959.htm" target="_blank" rel="noopener">南阳市消防救援支队及直属站零星维修服务项目-竞争性磋商公告</a>
+        <span class="urg u-calm">剩15天</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">南阳市消防救援支队 · 河南省/南阳市 · 预算 100万元</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省/南阳市</td></tr><tr><th>公告日</th><td>2026-11-06</td></tr><tr><th>采购单位</th><td>南阳市消防救援支队</td></tr><tr><th>服务类型</th><td>消防工程 · 竞争性磋商公告</td></tr><tr><th>预算金额</th><td>100万元</td></tr><tr><th>投标截止</th><td>2026-11-24</td></tr><tr><th>服务期限</th><td>自合同签订之日起一年</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>河南一本商汇工程管理有限公司</td></tr><tr><th>来源</th><td>中国政府采购网</td></tr></table>
+        <a class="src" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261106_27632959.htm" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-calm" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">11</span>
+        <a class="ttl" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261105_27626076.htm" target="_blank" rel="noopener">方城县房产中心方城县七峰家园给水工程和室外消防及消防弱电工程项目-竞争性磋商公告</a>
+        <span class="urg u-calm">剩22天</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">方城县房产中心 · 河南省 · 预算 123.83万元</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省</td></tr><tr><th>公告日</th><td>2026-11-05</td></tr><tr><th>采购单位</th><td>方城县房产中心</td></tr><tr><th>服务类型</th><td>消防工程 · 竞争性磋商公告</td></tr><tr><th>预算金额</th><td>123.83万元</td></tr><tr><th>投标截止</th><td>2026-12-01</td></tr><tr><th>服务期限</th><td>150日历天</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>南阳市恒胜工程管理有限公司</td></tr><tr><th>来源</th><td>中国政府采购网</td></tr></table>
+        <a class="src" href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202611/t20261105_27626076.htm" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-none" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">12</span>
+        <a class="ttl" href="https://www.qianlima.com/bid-645768868.html" target="_blank" rel="noopener">同乐寨建材市场消防改造工程-竞争性磋商公告</a>
+        <span class="urg u-none">截止未披露</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">未披露 · 河南省</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省</td></tr><tr><th>公告日</th><td>2026-11-08</td></tr><tr><th>采购单位</th><td>未披露</td></tr><tr><th>服务类型</th><td>消防工程 · 招标公告</td></tr><tr><th>预算金额</th><td>未披露</td></tr><tr><th>投标截止</th><td>未披露</td></tr><tr><th>服务期限</th><td>未披露</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>未披露</td></tr><tr><th>来源</th><td>千里马招标网·河南招标网</td></tr></table>
+        <a class="src" href="https://www.qianlima.com/bid-645768868.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-none" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">13</span>
+        <a class="ttl" href="https://www.qianlima.com/bid-645758397.html" target="_blank" rel="noopener">郑州航空港区安康佳苑、雅苑保障房项目施工总承包一标段消防工程一标段</a>
+        <span class="urg u-none">截止未披露</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">未披露 · 河南省/郑州市</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省/郑州市</td></tr><tr><th>公告日</th><td>2026-11-08</td></tr><tr><th>采购单位</th><td>未披露</td></tr><tr><th>服务类型</th><td>消防工程 · 招标公告</td></tr><tr><th>预算金额</th><td>未披露</td></tr><tr><th>投标截止</th><td>未披露</td></tr><tr><th>服务期限</th><td>未披露</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>未披露</td></tr><tr><th>来源</th><td>千里马招标网·河南招标网</td></tr></table>
+        <a class="src" href="https://www.qianlima.com/bid-645758397.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-none" data-track="电力工程">
+      <div class="row-top">
+        <span class="idx">14</span>
+        <a class="ttl" href="https://www.qianlima.com/bid-645745464.html" target="_blank" rel="noopener">泉店煤矿110千伏变电站第二回路架空线路工程水土保持设施验收资审公告</a>
+        <span class="urg u-none">截止未披露</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-电力工程">电力工程</span>
+        
+        <span class="m">未披露 · 河南省</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省</td></tr><tr><th>公告日</th><td>2026-11-08</td></tr><tr><th>采购单位</th><td>未披露</td></tr><tr><th>服务类型</th><td>电力工程 · 招标公告</td></tr><tr><th>预算金额</th><td>未披露</td></tr><tr><th>投标截止</th><td>未披露</td></tr><tr><th>服务期限</th><td>未披露</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>未披露</td></tr><tr><th>来源</th><td>千里马招标网·河南招标网</td></tr></table>
+        <a class="src" href="https://www.qianlima.com/bid-645745464.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-none" data-track="光伏工程">
+      <div class="row-top">
+        <span class="idx">15</span>
+        <a class="ttl" href="https://www.qianlima.com/bid-645564366.html" target="_blank" rel="noopener">华源能源信阳市第一污水处理厂分布式光伏发电项目EPC总承包招标公告</a>
+        <span class="urg u-none">截止未披露</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-光伏工程">光伏工程</span>
+        
+        <span class="m">未披露 · 河南省/信阳市</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省/信阳市</td></tr><tr><th>公告日</th><td>2026-11-06</td></tr><tr><th>采购单位</th><td>未披露</td></tr><tr><th>服务类型</th><td>光伏工程 · 招标公告</td></tr><tr><th>预算金额</th><td>未披露</td></tr><tr><th>投标截止</th><td>未披露</td></tr><tr><th>服务期限</th><td>未披露</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>未披露</td></tr><tr><th>来源</th><td>千里马招标网·河南招标网</td></tr></table>
+        <a class="src" href="https://www.qianlima.com/bid-645564366.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-none" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">16</span>
+        <a class="ttl" href="https://www.qianlima.com/bid-645443487.html" target="_blank" rel="noopener">金水区总医院消防整改项目竞争性磋商公告</a>
+        <span class="urg u-none">截止未披露</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-消防工程">消防工程</span>
+        
+        <span class="m">未披露 · 河南省</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省</td></tr><tr><th>公告日</th><td>2026-11-06</td></tr><tr><th>采购单位</th><td>未披露</td></tr><tr><th>服务类型</th><td>消防工程 · 招标公告</td></tr><tr><th>预算金额</th><td>未披露</td></tr><tr><th>投标截止</th><td>未披露</td></tr><tr><th>服务期限</th><td>未披露</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>未披露</td></tr><tr><th>来源</th><td>千里马招标网·河南招标网</td></tr></table>
+        <a class="src" href="https://www.qianlima.com/bid-645443487.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-none" data-track="光伏工程">
+      <div class="row-top">
+        <span class="idx">17</span>
+        <a class="ttl" href="https://www.qianlima.com/bid-645499942.html" target="_blank" rel="noopener">河南天山-豫南供应中心-淅川中联光伏建设服务项目</a>
+        <span class="urg u-none">截止未披露</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-光伏工程">光伏工程</span>
+        
+        <span class="m">未披露 · 河南省</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省</td></tr><tr><th>公告日</th><td>2026-11-06</td></tr><tr><th>采购单位</th><td>未披露</td></tr><tr><th>服务类型</th><td>光伏工程 · 招标变更</td></tr><tr><th>预算金额</th><td>未披露</td></tr><tr><th>投标截止</th><td>未披露</td></tr><tr><th>服务期限</th><td>未披露</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>未披露</td></tr><tr><th>来源</th><td>千里马招标网·河南招标网</td></tr></table>
+        <a class="src" href="https://www.qianlima.com/bid-645499942.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="card u-none" data-track="风电工程">
+      <div class="row-top">
+        <span class="idx">18</span>
+        <a class="ttl" href="https://www.qianlima.com/bid-645452145.html" target="_blank" rel="noopener">国家电投福建公司郏县蒙风、曹城国投、淮安中恒3座风电场技术监督专项检测服务询价公告（变更）</a>
+        <span class="urg u-none">截止未披露</span>
+      </div>
+      <div class="meta">
+        <span class="track tk-风电工程">风电工程</span>
+        
+        <span class="m">未披露 · 河南省</span>
+      </div>
+      <details>
+        <summary>展开详情</summary>
+        <table class="dt"><tr><th>地区</th><td>河南省</td></tr><tr><th>公告日</th><td>2026-11-06</td></tr><tr><th>采购单位</th><td>未披露</td></tr><tr><th>服务类型</th><td>风电工程 · 招标变更</td></tr><tr><th>预算金额</th><td>未披露</td></tr><tr><th>投标截止</th><td>未披露</td></tr><tr><th>服务期限</th><td>未披露</td></tr><tr><th>资格要求</th><td>未披露</td></tr><tr><th>代理机构</th><td>未披露</td></tr><tr><th>来源</th><td>千里马招标网·河南招标网</td></tr></table>
+        <a class="src" href="https://www.qianlima.com/bid-645452145.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+  </ul>
+
+  <div class="foot">
+    数据来源：中国政府采购网 · 全国公共资源交易平台 · 千里马招标网（河南招标网）· 标800信息网<br>
+    字段「未披露」表示原平台未公开，非抓取遗漏。投标截止以原公告为准，点击标题直达原文。
+  </div>
+</div>
+
+<script>
+(function(){
+  var chips = document.querySelectorAll('.chip');
+  var list = document.getElementById('list');
+  var cards = list.querySelectorAll('.card');
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      chips.forEach(function(x){ x.classList.remove('on'); });
+      c.classList.add('on');
+      var f = c.dataset.f;
+      cards.forEach(function(card){
+        var show = (f === 'all')
+          || (f === 'hot' && card.classList.contains('u-hot'))
+          || card.dataset.track === f;
+        card.classList.toggle('hide', !show);
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+})();
+</script>
+</body></html>
