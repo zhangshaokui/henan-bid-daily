@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="河南省 消防工程、消防维保、风电工程、电力工程 招标信息日报 · 2026-11-10">
+<meta property="og:title" content="河南招标日报 · 2026-11-10">
+<meta property="og:description" content="共 14 条，点击标题直达原公告">
+<meta name="theme-color" content="#1f5c9e">
+<title>河南招标日报 · 2026-11-10</title>
+<style>
+:root {
+  --bg:#fbfbfc; --ink:#171a1f; --ink-2:#4d545f; --ink-3:#8b929d;
+  --line:#e8eaee; --line-2:#f0f2f5; --card:#fff;
+  --accent:#1f5c9e; --accent-soft:#eef4fb;
+  --urgent:#c0392b; --soon:#b26a00;
+  --radius:10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:#14161a; --ink:#e9ebef; --ink-2:#a7aeba; --ink-3:#6f7784;
+    --line:#23262c; --line-2:#1c1f24; --card:#171a1f;
+    --accent:#7aa9e8; --accent-soft:#18222f;
+    --urgent:#ef8074; --soon:#dda44e;
+  }
+}
+* { box-sizing:border-box; }
+html,body { max-width:100%; overflow-x:hidden; }
+body { margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased; font-size:16px; line-height:1.65;
+  text-rendering:optimizeLegibility; }
+a { color:var(--accent); }
+.wrap { max-width:720px; margin:0 auto; padding:0 26px 88px; }
+
+/* ── 页眉 ── */
+.masthead { padding:44px 0 0; }
+.brandline { display:flex; align-items:baseline; gap:12px; margin-bottom:26px; }
+.brand { font-size:13px; font-weight:600; letter-spacing:.14em;
+  color:var(--ink-3); text-transform:uppercase; }
+.brandline .d { font-size:13px; color:var(--ink-3); font-variant-numeric:tabular-nums; }
+.brandline .c { margin-left:auto; font-size:13px; color:var(--ink-3); }
+
+h1 { font-size:31px; line-height:1.3; margin:0 0 18px; font-weight:680;
+  letter-spacing:-.4px; color:var(--ink); }
+h1 .red { color:var(--urgent); font-weight:700; }
+.intro { color:var(--ink-2); font-size:16px; line-height:1.85; margin:0 0 6px; max-width:34em; }
+.intro .red { color:var(--urgent); font-weight:640; }
+.intro .note { color:var(--ink-3); font-size:14.5px; }
+
+/* ── 指标：单行文字，不用方格 ── */
+.stats { display:flex; flex-wrap:wrap; gap:6px 22px; margin:26px 0 0;
+  padding:16px 0 0; border-top:1px solid var(--line); }
+.stat { font-size:14px; color:var(--ink-3); }
+.stat b { color:var(--ink); font-weight:640; font-variant-numeric:tabular-nums;
+  letter-spacing:-.2px; }
+.stat.h b { color:var(--urgent); }
+.stat.s b { color:var(--soon); }
+
+/* ── 筛选 ── */
+.filters { display:flex; gap:8px; overflow-x:auto; padding:30px 0 6px;
+  -webkit-overflow-scrolling:touch; scrollbar-width:none;
+  border-bottom:1px solid var(--line); }
+.filters::-webkit-scrollbar { display:none; }
+.chip { flex:0 0 auto; border:1px solid transparent; background:transparent;
+  color:var(--ink-2); border-radius:999px; padding:7px 14px; font-size:14px;
+  font-family:inherit; cursor:pointer; transition:background .18s,color .18s; }
+.chip i { font-style:normal; color:var(--ink-3); margin-left:2px;
+  font-variant-numeric:tabular-nums; }
+.chip:hover { background:var(--line-2); }
+.chip.on { background:var(--accent); color:#fff; }
+.chip.on i { color:rgba(255,255,255,.72); }
+.chip.warn { color:var(--urgent); }
+.chip.warn.on { background:var(--urgent); color:#fff; }
+@media (prefers-reduced-motion: reduce) { .chip { transition:none; } }
+
+/* ── 列表：无卡片，靠留白与分隔线 ── */
+.list { list-style:none; margin:0; padding:0; }
+.item { padding:26px 0 24px; border-bottom:1px solid var(--line-2); }
+.item:last-child { border-bottom:none; }
+.item.u-hot { position:relative; }
+.item.u-hot::before { content:""; position:absolute; left:-26px; top:30px;
+  width:3px; height:20px; border-radius:2px; background:var(--urgent); }
+@media (max-width:560px) { .item.u-hot::before { left:-14px; } }
+
+.row-top { display:flex; align-items:baseline; gap:10px; min-width:0; }
+.idx { flex:0 0 auto; width:22px; color:var(--ink-3); font-size:14px;
+  font-variant-numeric:tabular-nums; text-align:right; line-height:1.62; }
+.ttl { flex:1 1 auto; min-width:0; color:var(--ink); font-weight:600;
+  font-size:17px; line-height:1.6; text-decoration:none;
+  overflow-wrap:anywhere; transition:color .16s; }
+.ttl:hover { color:var(--accent); }
+.urg { font-size:12px; font-weight:600; padding:1px 7px;
+  border-radius:999px; white-space:nowrap; color:var(--ink-3);
+  background:var(--line-2); margin-left:-6px; }
+.u-hot .urg { color:var(--urgent); background:color-mix(in srgb,var(--urgent) 11%,transparent); }
+.u-warm .urg { color:var(--soon); background:color-mix(in srgb,var(--soon) 12%,transparent); }
+.u-past { opacity:.5; }
+
+.meta { display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px;
+  margin-top:9px; padding-left:30px; color:var(--ink-3); font-size:13.5px; }
+.track { color:var(--accent); font-weight:600; }
+.sep { color:var(--line); }
+.meta .v { color:var(--ink-2); }
+.meta .due { font-variant-numeric:tabular-nums; }
+.u-hot .meta .due { color:var(--urgent); font-weight:600; }
+
+details { margin:12px 0 0 30px; }
+summary { cursor:pointer; font-size:13.5px; color:var(--ink-3); list-style:none;
+  display:inline-flex; align-items:center; gap:6px; user-select:none;
+  transition:color .16s; }
+summary:hover { color:var(--accent); }
+summary::-webkit-details-marker { display:none; }
+summary::before { content:"▸"; font-size:10px; color:var(--ink-3);
+  transition:transform .18s; display:inline-block; }
+details[open] summary::before { transform:rotate(90deg); }
+details[open] summary { color:var(--ink-3); }
+.dl { margin:12px 0 0; display:grid; grid-template-columns:auto 1fr;
+  gap:7px 16px; font-size:13.5px; }
+.dl dt { color:var(--ink-3); white-space:nowrap; }
+.dl dd { margin:0; color:var(--ink-2); overflow-wrap:anywhere; }
+.src { display:inline-block; margin-top:12px; font-size:13.5px;
+  color:var(--accent); text-decoration:none; }
+
+.foot { margin-top:52px; padding-top:22px; border-top:1px solid var(--line);
+  color:var(--ink-3); font-size:13px; line-height:1.9; }
+.hide { display:none !important; }
+@media (max-width:560px) {
+  .wrap { padding:0 20px 64px; }
+  .masthead { padding:34px 0 0; }
+  h1 { font-size:26px; }
+  .meta, details { padding-left:0; margin-left:0; }
+  .stats { gap:5px 18px; }
+  .item { padding:22px 0 20px; }
+}
+@media print {
+  .filters { display:none; }
+  .item { break-inside:avoid; border-bottom:1px solid #ddd; }
+  details { display:none; }
+  .ttl { color:#000; }
+}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div class="brandline">
+      <span class="brand">每日推送</span>
+      <span class="d">2026-11-10 星期二</span>
+      <span class="c">14 条</span>
+    </div>
+    <h1>您好，今日新增招标信息 <span class="red">14</span> 条</h1>
+    <div class="intro">11月05日下午至11月10日清晨新增监测到消防工程、消防维保、风电工程、电力工程类招标信息 <b class="red">14</b> 条。<br><span class="note">本页仅含<b>今日新增</b>；全部在架项目见「全部在架」页。</span></div>
+    
+  </div>
+
+  <div class="stats">
+    <div class="stat">覆盖 <b>4</b> 个赛道</div>
+    <div class="stat">仍可投标 <b>14</b> 条</div>
+    <div class="stat h">最近 <b>21天</b> 截止</div>
+    <div class="stat s">已披露预算 <b>0</b> 条</div>
+  </div>
+
+  <div class="filters" role="tablist">
+    <button class="chip on" data-f="all">全部 <i>14</i></button><button class="chip" data-f="消防工程">消防工程 <i>8</i></button><button class="chip" data-f="消防维保">消防维保 <i>2</i></button><button class="chip" data-f="风电工程">风电工程 <i>2</i></button><button class="chip" data-f="电力工程">电力工程 <i>2</i></button>
+  </div>
+
+  <ul class="list" id="list">
+    
+    <li class="item u-calm" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">1</span>
+        <a class="ttl" href="https://www.ggzy.gov.cn/information/deal/html/a/410000/0101/20261109/00413833fff93db64782bad0096e2280b50e.html" target="_blank" rel="noopener">镇平县玉都城市花园建设项目专业分包工程（消防工程）</a>
+      </div>
+      <div class="meta">
+        <span class="track">消防工程</span>
+        
+        <span class="sep">·</span><span class="v">河南省</span>
+        <span class="sep">·</span><span class="due">截止 2026-12-01</span>
+        
+        
+        <span class="sep">·</span><span class="v">分包项目</span>
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省</dd><dt>公告日</dt><dd>2026-11-09</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>消防工程 · 招标/资审公告</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>2026-12-01</dd><dt>服务期限</dt><dd>120日历天</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>正启工程服务有限公司</dd><dt>来源</dt><dd>全国公共资源交易平台</dd></dl>
+        <a class="src" href="https://www.ggzy.gov.cn/information/deal/html/a/410000/0101/20261109/00413833fff93db64782bad0096e2280b50e.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="item u-none" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">2</span>
+        <a class="ttl" href="https://www.qianlima.com/bid-646154061.html" target="_blank" rel="noopener">[河南省﹒新乡市﹒获嘉县][竞争性谈判][竞争性谈判]获嘉县文化广电和旅游局获嘉城隍庙及文庙消防工程、同盟山遗址（武王庙）及寂照寺防雷工程、东[正在报名]</a>
+      </div>
+      <div class="meta">
+        <span class="track">消防工程</span>
+        
+        <span class="sep">·</span><span class="v">河南省/新乡市</span>
+        <span class="sep">·</span><span class="due">截止 未披露</span>
+        
+        
+        
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省/新乡市</dd><dt>公告日</dt><dd>2026-11-09</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>消防工程 · 招标公告</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>未披露</dd><dt>服务期限</dt><dd>未披露</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>未披露</dd><dt>来源</dt><dd>千里马招标网·河南招标网</dd></dl>
+        <a class="src" href="https://www.qianlima.com/bid-646154061.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="item u-none" data-track="风电工程">
+      <div class="row-top">
+        <span class="idx">3</span>
+        <a class="ttl" href="https://www.qianlima.com/bid-646112763.html" target="_blank" rel="noopener">河南公司清洁能源公司东村、荣唐、马棚山风电场华创2MW风机变桨轴承增强型改造询比采购公告（变更）</a>
+      </div>
+      <div class="meta">
+        <span class="track">风电工程</span>
+        
+        <span class="sep">·</span><span class="v">河南省</span>
+        <span class="sep">·</span><span class="due">截止 未披露</span>
+        
+        
+        
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省</dd><dt>公告日</dt><dd>2026-11-09</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>风电工程 · 招标变更</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>未披露</dd><dt>服务期限</dt><dd>未披露</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>未披露</dd><dt>来源</dt><dd>千里马招标网·河南招标网</dd></dl>
+        <a class="src" href="https://www.qianlima.com/bid-646112763.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="item u-none" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">4</span>
+        <a class="ttl" href="https://www.biao800.cn/detail/20261110-226947962.html" target="_blank" rel="noopener">新乡市文物考古研究所中共平原省委旧址消防工程项目-竞争性磋商公告</a>
+      </div>
+      <div class="meta">
+        <span class="track">消防工程</span>
+        
+        <span class="sep">·</span><span class="v">河南省/新乡市</span>
+        <span class="sep">·</span><span class="due">截止 未披露</span>
+        
+        
+        
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省/新乡市</dd><dt>公告日</dt><dd>2026-11-10</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>消防工程 · 招标公告</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>未披露</dd><dt>服务期限</dt><dd>未披露</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>未披露</dd><dt>来源</dt><dd>标800信息网</dd></dl>
+        <a class="src" href="https://www.biao800.cn/detail/20261110-226947962.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="item u-none" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">5</span>
+        <a class="ttl" href="https://www.biao800.cn/detail/20261110-226947949.html" target="_blank" rel="noopener">获嘉县文化广电和旅游局获嘉城隍庙及文庙消防工程、同盟山遗址（武王庙）及寂照寺防雷工程、东张巨刘氏旧宅保护修缮工程项目-竞争性谈判公告</a>
+      </div>
+      <div class="meta">
+        <span class="track">消防工程</span>
+        
+        <span class="sep">·</span><span class="v">河南省/新乡市</span>
+        <span class="sep">·</span><span class="due">截止 未披露</span>
+        
+        
+        
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省/新乡市</dd><dt>公告日</dt><dd>2026-11-10</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>消防工程 · 招标公告</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>未披露</dd><dt>服务期限</dt><dd>未披露</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>未披露</dd><dt>来源</dt><dd>标800信息网</dd></dl>
+        <a class="src" href="https://www.biao800.cn/detail/20261110-226947949.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="item u-none" data-track="风电工程">
+      <div class="row-top">
+        <span class="idx">6</span>
+        <a class="ttl" href="https://www.biao800.cn/detail/20261109-226940912.html" target="_blank" rel="noopener">河南豫南区域运管中心所辖风电、光伏场站消防设施维保项目采购公告</a>
+      </div>
+      <div class="meta">
+        <span class="track">风电工程</span>
+        
+        <span class="sep">·</span><span class="v">河南省</span>
+        <span class="sep">·</span><span class="due">截止 未披露</span>
+        
+        
+        
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省</dd><dt>公告日</dt><dd>2026-11-09</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>风电工程 · 招标公告</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>未披露</dd><dt>服务期限</dt><dd>未披露</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>未披露</dd><dt>来源</dt><dd>标800信息网</dd></dl>
+        <a class="src" href="https://www.biao800.cn/detail/20261109-226940912.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="item u-none" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">7</span>
+        <a class="ttl" href="https://www.biao800.cn/detail/20261109-226922946.html" target="_blank" rel="noopener">驻马店黄金叶实业有限责任公司2026年驻马店黄金叶实业有限责任公司消防报警系统检测维保服务项目【重新招标】-询比公告</a>
+      </div>
+      <div class="meta">
+        <span class="track">消防工程</span>
+        
+        <span class="sep">·</span><span class="v">河南省/驻马店市</span>
+        <span class="sep">·</span><span class="due">截止 未披露</span>
+        
+        
+        
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省/驻马店市</dd><dt>公告日</dt><dd>2026-11-09</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>消防工程 · 招标公告</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>未披露</dd><dt>服务期限</dt><dd>未披露</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>未披露</dd><dt>来源</dt><dd>标800信息网</dd></dl>
+        <a class="src" href="https://www.biao800.cn/detail/20261109-226922946.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="item u-none" data-track="消防维保">
+      <div class="row-top">
+        <span class="idx">8</span>
+        <a class="ttl" href="https://www.biao800.cn/detail/20261109-226900177.html" target="_blank" rel="noopener">郑州市第三人民医院惠济院区消防维保服务-竞争性磋商公告</a>
+      </div>
+      <div class="meta">
+        <span class="track">消防维保</span>
+        
+        <span class="sep">·</span><span class="v">河南省/郑州市</span>
+        <span class="sep">·</span><span class="due">截止 未披露</span>
+        
+        
+        
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省/郑州市</dd><dt>公告日</dt><dd>2026-11-09</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>消防维保 · 招标公告</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>未披露</dd><dt>服务期限</dt><dd>未披露</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>未披露</dd><dt>来源</dt><dd>标800信息网</dd></dl>
+        <a class="src" href="https://www.biao800.cn/detail/20261109-226900177.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="item u-none" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">9</span>
+        <a class="ttl" href="https://www.biao800.cn/detail/20261109-226870420.html" target="_blank" rel="noopener">获嘉县文化广电和旅游局获嘉城隍庙及文庙消防工程、同盟山遗址（武王庙）及寂照寺防雷工程、东...</a>
+      </div>
+      <div class="meta">
+        <span class="track">消防工程</span>
+        
+        <span class="sep">·</span><span class="v">河南省/新乡市</span>
+        <span class="sep">·</span><span class="due">截止 未披露</span>
+        
+        
+        
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省/新乡市</dd><dt>公告日</dt><dd>2026-11-09</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>消防工程 · 招标公告</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>未披露</dd><dt>服务期限</dt><dd>未披露</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>未披露</dd><dt>来源</dt><dd>标800信息网</dd></dl>
+        <a class="src" href="https://www.biao800.cn/detail/20261109-226870420.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="item u-none" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">10</span>
+        <a class="ttl" href="https://www.biao800.cn/detail/20261109-226842715.html" target="_blank" rel="noopener">张仲景国医大学（筹）一期北地块（S5S6）项目消防工程三标段招标通知</a>
+      </div>
+      <div class="meta">
+        <span class="track">消防工程</span>
+        
+        <span class="sep">·</span><span class="v">河南省/南阳市</span>
+        <span class="sep">·</span><span class="due">截止 未披露</span>
+        
+        
+        
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省/南阳市</dd><dt>公告日</dt><dd>2026-11-09</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>消防工程 · 招标公告</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>未披露</dd><dt>服务期限</dt><dd>未披露</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>未披露</dd><dt>来源</dt><dd>标800信息网</dd></dl>
+        <a class="src" href="https://www.biao800.cn/detail/20261109-226842715.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="item u-none" data-track="消防维保">
+      <div class="row-top">
+        <span class="idx">11</span>
+        <a class="ttl" href="https://www.biao800.cn/detail/20261109-226769210.html" target="_blank" rel="noopener">白河南棚户区改造安置房建设项目消防检测服务项目竞争性磋商公告</a>
+      </div>
+      <div class="meta">
+        <span class="track">消防维保</span>
+        
+        <span class="sep">·</span><span class="v">河南省</span>
+        <span class="sep">·</span><span class="due">截止 未披露</span>
+        
+        
+        
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省</dd><dt>公告日</dt><dd>2026-11-09</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>消防维保 · 招标公告</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>未披露</dd><dt>服务期限</dt><dd>未披露</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>未披露</dd><dt>来源</dt><dd>标800信息网</dd></dl>
+        <a class="src" href="https://www.biao800.cn/detail/20261109-226769210.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="item u-none" data-track="电力工程">
+      <div class="row-top">
+        <span class="idx">12</span>
+        <a class="ttl" href="https://www.biao800.cn/detail/20261109-226925352.html" target="_blank" rel="noopener">中国铁路郑州局集团有限公司“洛阳供电段洛阳客技站DC600V500kVA变压器配电室设备大修工程”施工总价承包发包公告</a>
+      </div>
+      <div class="meta">
+        <span class="track">电力工程</span>
+        
+        <span class="sep">·</span><span class="v">河南省/洛阳市</span>
+        <span class="sep">·</span><span class="due">截止 未披露</span>
+        
+        
+        
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省/洛阳市</dd><dt>公告日</dt><dd>2026-11-09</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>电力工程 · 招标公告</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>未披露</dd><dt>服务期限</dt><dd>未披露</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>未披露</dd><dt>来源</dt><dd>标800信息网</dd></dl>
+        <a class="src" href="https://www.biao800.cn/detail/20261109-226925352.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="item u-none" data-track="电力工程">
+      <div class="row-top">
+        <span class="idx">13</span>
+        <a class="ttl" href="https://www.biao800.cn/detail/20261109-226812600.html" target="_blank" rel="noopener">河南省田径自行车运动中心配电室电气改造工程项目</a>
+      </div>
+      <div class="meta">
+        <span class="track">电力工程</span>
+        
+        <span class="sep">·</span><span class="v">河南省</span>
+        <span class="sep">·</span><span class="due">截止 未披露</span>
+        
+        
+        
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省</dd><dt>公告日</dt><dd>2026-11-09</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>电力工程 · 招标公告</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>未披露</dd><dt>服务期限</dt><dd>未披露</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>未披露</dd><dt>来源</dt><dd>标800信息网</dd></dl>
+        <a class="src" href="https://www.biao800.cn/detail/20261109-226812600.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+    <li class="item u-none" data-track="消防工程">
+      <div class="row-top">
+        <span class="idx">14</span>
+        <a class="ttl" href="https://www.biao800.cn/detail/20261109-226794612.html" target="_blank" rel="noopener">豫东南高新技术产业开发区储能创新装备制造产业园（二期）项目EPC总承包7#8#9#厂房消防工程专业分包竞争性磋商公告</a>
+      </div>
+      <div class="meta">
+        <span class="track">消防工程</span>
+        
+        <span class="sep">·</span><span class="v">河南省/商丘市</span>
+        <span class="sep">·</span><span class="due">截止 未披露</span>
+        
+        
+        <span class="sep">·</span><span class="v">分包项目</span>
+      </div>
+      <details>
+        <summary>项目详情</summary>
+        <dl class="dl"><dt>地区</dt><dd>河南省/商丘市</dd><dt>公告日</dt><dd>2026-11-09</dd><dt>采购单位</dt><dd>未披露</dd><dt>公告类型</dt><dd>消防工程 · 招标公告</dd><dt>预算金额</dt><dd>未披露</dd><dt>投标截止</dt><dd>未披露</dd><dt>服务期限</dt><dd>未披露</dd><dt>资格要求</dt><dd>未披露</dd><dt>代理机构</dt><dd>未披露</dd><dt>来源</dt><dd>标800信息网</dd></dl>
+        <a class="src" href="https://www.biao800.cn/detail/20261109-226794612.html" target="_blank" rel="noopener">查看原公告 →</a>
+      </details>
+    </li>
+  </ul>
+
+  <div class="foot">
+    数据来源：中国政府采购网 · 全国公共资源交易平台 · 千里马招标网（河南招标网）· 标800信息网<br>
+    字段「未披露」表示原平台未公开，非抓取遗漏。投标截止以原公告为准，点击标题直达原文。
+  </div>
+</div>
+
+<script>
+(function(){
+  var chips = document.querySelectorAll('.chip');
+  var list = document.getElementById('list');
+  var cards = list.querySelectorAll('.card');
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      chips.forEach(function(x){ x.classList.remove('on'); });
+      c.classList.add('on');
+      var f = c.dataset.f;
+      cards.forEach(function(card){
+        var show = (f === 'all')
+          || (f === 'hot' && card.classList.contains('u-hot'))
+          || card.dataset.track === f;
+        card.classList.toggle('hide', !show);
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+})();
+</script>
+</body></html>
